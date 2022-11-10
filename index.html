@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // interView Question .
+    // Find the occurence og character in string in a sequence order?
+
+    //Algo:-
+    // step-1 split the string into array.
+    // step2- iterate a loop on split aaray .
+    // step3- set initial counter as 1.
+    // step4- create a condition like if splitstr[i]=== splistr[i+1] then increase the counter.
+    // else assign str[i]+counter to the blank str.
+    // step5- rset the counter again.
+
+    const str = "AAAABBBCCDAABB";
+    let blankStr = "";
+    let counter = 1;
+    let splitstr = str.split("");
+    for (let i = 0; i < splitstr.length; i++) {
+      // console.log(splitstr[i]);
+      if (splitstr[i] === splitstr[i + 1]) {
+        // A at 0 index === 1 index (increase counter)
+        // console.log(splitstr[i + 1]);
+        counter++;
+        // console.log(counter++);
+      } else {
+        blankStr = blankStr + str[i] + counter; // "" = ""+ A + 4
+        // console.log(blankStrs);
+        counter = 1;
+      }
+    }
+    console.log(blankStr);
+  </script>
+</html>
